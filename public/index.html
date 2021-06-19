@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Automatic Coloring Framework Name</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<!-- Vue CDN -->
+		<script src="./assets/js/vue.global.js"></script>
+	</head>
+	<body>
+		<!-- Declarative Rendering {{ <data> }} -->
+		<!-- Attribute Binding v-bind:<attribute>="<value>" -->
+		<!-- Handling user input v-on:<event>="<method>" -->
+		<!-- Two Way data binding v-model="<data>" -->
+		<div id="App">
+			<div class="container">
+				<h1 v-bind:title="title">{{ message }}</h1>
+				<div class="row">
+					<div class="col">
+						<div class="input-group">
+							<!-- <input v-model="message" type="text" class="form-control focus-purple" /> -->
+							<input v-on:input="liveInput" type="text" class="form-control focus-purple" />
+							<button v-on:click="reverseMessage" class="btn btn-dark">Reverse</button>
+						</div>
+						<p>type Vue to see it's color</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<div class="counter">
+							Counter: {{ counter }}
+							<button id="min" class="btn btn-light" v-on:click="minCounter">-</button>
+							<button id="plus" class="btn btn-light" v-on:click="plusCounter">+</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- App.js -->
+		<script src="../App.js"></script>
+	</body>
+</html>

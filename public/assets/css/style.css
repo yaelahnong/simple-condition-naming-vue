@@ -1,0 +1,32 @@
+/* Global CSS */
+.v-color {
+	color: #3eaf7c;
+}
+
+.r-color {
+	color: #61dafb;
+}
+
+.a-color {
+	color: #dd0031;
+}
+
+/* Custom CSS */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 20px;
+}
+
+.counter {
+	margin-top: 20px;
+}
+
+.counter button {
+	margin-left: 6px;
+}
